@@ -8,9 +8,9 @@ $field_phone = $_POST['phone'];
 
 $field_message = $_POST['message'];
 
-$mail_to = 'to@email.com';
+$mail_to = 'hr@advysr.com';
 
-$subject = 'Message from a site visitor '.$field_first_name;
+$subject = 'Application to Mentor '.$field_first_name;
 
 $body_message = 'From: '.$field_first_name."\n";
 
