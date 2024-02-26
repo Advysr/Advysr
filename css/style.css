@@ -566,16 +566,23 @@ iframe {
 	text-decoration: none;
 	white-space: nowrap;
 	max-width: 210px;
+	flex-grow: 1;
 }
 
+.logo {
+    height: 50px;
+    width: auto;
+}
 
 .navbar {
 	width: 100%;
+	display: flex;
 	z-index: 9999;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-left: 0;
 	padding-right: 0;
+	display: flex;
 }
 
 .navbar-toggler {
@@ -598,6 +605,7 @@ iframe {
 	box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.04)!important;
 	border-bottom: none;
 	transition: background-color 0.25s ease 0s;
+	display: flex;
 }
 
 .navbar-fixed-top.opaque {
@@ -1689,6 +1697,12 @@ ul.benefits.white li i {
 
 @media (max-width: 768px) {
 
+
+	.navbar {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	
 	.register-form-wrapper{
 		padding-bottom: 45px;
 	}
