@@ -126,29 +126,47 @@
                             <p class="white-text">We are a community of subject matter experts helping others to achieve wonders.</p>
                             <p class="white-text">To apply to join us, please fill in the contact form below.</p>
                             <!--begin form-->
-                            <div>
-                                 
+                            <div class="register">
                                 <!--begin success message -->
                                 <p class="register_success_box" style="display:none;">We received your application and you'll hear from us soon. Thank You!</p>
                                 <!--end success message -->
                                 
-                                <!--begin register form -->
-                                <form id="register-form" class="register-form register" action="https://formspree.io/f/xleqnbpw" method="post">
-                                    
-                                      <label><input class="register-input name-input" required="" name="firstName" placeholder="Your First Name*" type="text"></label>
-                                
-                                      <label><input class="register-input name-input" required="" name="lastName" placeholder="Your Last Name*" type="text"></label>
-                                
-                                      <label><input class="register-input name-email" required="" name="email" placeholder="Email Adress*" type="email"></label>
-                        
-                                      <label><input class="register-input name-input" required="" name="phone" placeholder="Phone Number*" type="text"></label>
-
-                                      <label><textarea class="register-comment" rows="2" cols="20" name="message" placeholder="Tell us a little about yourself..."></textarea></label>
-                                   
-                                    <button class="register-submit" type="submit">Apply To Join Advysr Now</button>
-                                        
-                                </form>
-                                <!--end register form -->
+                                <form id="fs-frm" class="register-form register" name="survey-form" accept-charset="utf-8" action="https://formspree.io/f/xleqnbpw" method="post">
+                                    <fieldset id="fs-frm-inputs" class="register-input name-input">
+                                      <label class="white-text" for="full-name">Full Name</label>
+                                      <input class="register-input name-input" type="text" name="name" id="full-name" placeholder="First and Last" required="">
+                                      <label class="white-text" for="email-address">Email Address</label>
+                                      <input class="register-input name-email" type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+                                      <fieldset id="fs-frm-selects">
+                                        <label class="white-text" for="timely">1. How many years working experience do you have?</label>
+                                        <div class="select">
+                                                <select class="round" name="experience" id="experience" required="">
+                                                    <option value="" selected="" disabled="">Experience</option>
+                                                    <option value="1">0-5 Years</option>
+                                                    <option value="3">6-10 Years</option>
+                                                    <option value="5">11-15 Years</option>
+                                                    <option value="7">16-20 Years</option>
+                                                    <option value="9">20+ Years</option>
+                                                </select>
+                                        </div>
+                                        <label class="white-text" for="timely">2. What is the highest level of qualification you have?</label>
+                                            <div class="select">
+                                                <select class="round" name="quality" id="qualification" required="">
+                                                <option value="" selected="" disabled="">Qualifications</option>
+                                                <option value="1">High School</option>
+                                                <option value="3">Bachelors Degree/Diploma</option>
+                                                <option value="5">Masters Degree</option>
+                                                <option value="7">PhD</option>
+                                                <option value="9">None</option>
+                                                </select>
+                                            </div>
+                                      </fieldset>
+                                      <label class="white-text" for="message">Additional Comments</label>
+                                      <textarea rows="3" name="message" id="message" placeholder="Anything else you may want to share." required=""></textarea>
+                                      <input type="hidden" name="_subject" id="email-subject" value="Application">
+                                    </fieldset>
+                                    <input class="register-submit" type="submit" value="Send Your Application">
+                                  </form>
 
                                 <p class="register-form-terms">We will respond with the onboarding process &#8226; We will not ask you for payment.</p>
                                 
